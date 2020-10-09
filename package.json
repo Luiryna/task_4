@@ -1,0 +1,24 @@
+{
+  "name": "4",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Luiryna/task_4.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Luiryna/task_4/issues"
+  },
+  "homepage": "https://github.com/Luiryna/task_4#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql2": "^2.2.5"
+  }
+}
