@@ -63,11 +63,21 @@ export const TablePage = () => {
         clearError()
     }, [clearError])
 
+    if (loading) {
+        return <LoadingIndicator />
+      }
+
     return (
         <div>
             <Toolbar handler={toolbarHandler} />
             {!loading && <UserDataList users={usersData} setUsers={setUsersData} />}
             {loading && <LoadingIndicator />}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Hey!</strong> If you select the block or delete button with your <strong>ID</strong>, you will be logined out
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                 </button>
+            </div>
         </div>
     )
 }

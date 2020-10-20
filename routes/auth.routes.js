@@ -121,36 +121,5 @@ router.post('/signin',
     }
 )
 
-router.get('users', async (req, res) => {
-    try {
-        let users = await User.findAll({})
-
-        if (!users) {
-            return res.status(204).json({
-                message: "No users found"
-            })
-        }
-
-        users = users.map(user => {
-            return {
-                id: user.id,
-                fullName: user.firstName + " " + user.lastName,
-                email: user.email,
-                createdAt: user.createdAt,
-                updatedAt: user.updatedAt ? user.updatedAt : "User haven't logged in yet",
-                status: user.status
-            }
-        })
-
-        res.status(200).json({
-            users
-        })
-
-    } catch (e) {
-        res.status(500).json({
-            message: "Something went wrong. Try again."
-        })
-    }
-})
 
 module.exports = router

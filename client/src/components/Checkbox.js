@@ -10,7 +10,7 @@ export const Checkbox = ({ name, checked, onChange }) => (
                 onChange={onChange}
                 className="form-check-input"
             />
-            {name}
+            {/* {name} */}
         </label>
     </div>
 )

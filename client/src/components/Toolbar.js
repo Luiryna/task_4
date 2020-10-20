@@ -14,14 +14,14 @@ export const Toolbar = ({ handler }) => {
                 name="Active"
                 value="PUT"
                 onClick={handler}
-                className="btn btn-secondary">
+                className="btn btn-success">
                 Active
             </button>
             <button type="button"
                 name="Delete"
                 value="DELETE"
                 onClick={handler}
-                className="btn btn-secondary">
+                className="btn btn-danger">
                 Delete
             </button>
         </div>

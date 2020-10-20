@@ -26,10 +26,7 @@ export const AuthPage = () => {
 
     return (
         <div>
-            <div className="card" style={{ marginTop: "3rem" }}>
-                <div className="card-header">
-                    Task #4, Itransition
-                </div>
+            <div className="card" style={{ marginTop: "7rem" , marginLeft: "15rem", marginRight: "15rem"}}>
                 <div className="card-body">
                     <h5 className="card-title text-center">Authorization</h5>
                     <div className="form-group">
@@ -53,7 +50,6 @@ export const AuthPage = () => {
                     </div>
                     <div className="text-center">
                         <button className="btn btn-primary" disabled={loading} onClick={loginHandler} style={{ marginRight: 10 }}>Sign in</button>
-                        <a href="/signup" className="btn btn-secondary">Sign up</a>
                     </div>
                 </div>
             </div>

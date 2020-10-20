@@ -24,11 +24,11 @@ export const UserDataList = ({ users, setUsers }) => {
 
     return (
         <div className="table-responsive">
-            <table className="table table-hover">
+            <table className="table table-striped">
                 <thead className="thead-light">
                     <tr>
                         <th scope="col">
-                            <p>Select/remove all</p>
+                           
                             <input type="checkbox"
                                 name="checkAll"
                                 checked={allChecked}
