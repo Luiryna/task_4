@@ -3,7 +3,6 @@ const auth = require('../middleware/auth.middleware')
 const User = require('../models/User')
 const router = Router()
 
-// api/content/users
 router.get('/users', auth, async (req, res) => {
     try {
         let users = await User.findAll({})
@@ -13,8 +12,7 @@ router.get('/users', auth, async (req, res) => {
                 fullName: user.firstName + " " + user.lastName,
                 email: user.email,
                 createdAt: user.createdAt.toISOString().split('T')[0],
-                updatedAt: user.updatedAt ? user.updatedAt.toISOString().split('T')[0]
-                    : "User haven't logged in yet",
+                updatedAt: user.updatedAt.toISOString().split('T')[0],
                 status: user.status,
                 isChecked: false
             }
@@ -27,7 +25,6 @@ router.get('/users', auth, async (req, res) => {
     }
 })
 
-// api/content/user
 router.put('/users', auth, async (req, res) => {
     try {
         const { ids, status } = req.body
