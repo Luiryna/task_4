@@ -11,8 +11,8 @@ router.get('/users', auth, async (req, res) => {
                 id: user.id,
                 fullName: user.firstName + " " + user.lastName,
                 email: user.email,
-                createdAt: user.createdAt.toISOString().split('T')[0],
-                updatedAt: user.updatedAt.toISOString().split('T')[0],
+                createdAt: user.createdAt.toISOString(),
+                updatedAt: user.updatedAt.toISOString(),
                 status: user.status,
                 isChecked: false
             }

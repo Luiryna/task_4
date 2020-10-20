@@ -34,7 +34,6 @@ export const RegisterPage = () => {
                 <div className="card-body">
                     <h5 className="card-title text-center">Registration</h5>
                     <div className="form-group">
-                        <label htmlFor="email">Email address</label>
                         <input type="email"
                             className="form-control"
                             name="email"
@@ -58,7 +57,6 @@ export const RegisterPage = () => {
                         </div>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="password">Password</label>
                         <input type="password"
                             className="form-control"
                             name="password"
