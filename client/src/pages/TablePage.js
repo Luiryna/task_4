@@ -2,7 +2,7 @@ import React, { useEffect, useState, useContext, useCallback } from 'react'
 import { useHttp } from '../hooks/http.hook'
 import { AuthContext } from '../context/AuthContext'
 import { LoadingIndicator } from '../components/Loader'
-import { UserDataList } from '../components/UserDataList'
+import { Table } from '../components/Table'
 import { Toolbar } from '../components/Toolbar'
 
 export const TablePage = () => {
@@ -70,7 +70,7 @@ export const TablePage = () => {
     return (
         <div>
             <Toolbar handler={toolbarHandler} />
-            {!loading && <UserDataList users={usersData} setUsers={setUsersData} />}
+            {!loading && <Table users={usersData} setUsers={setUsersData} />}
             {loading && <LoadingIndicator />}
             <div class="alert alert-warning alert-dismissible fade show" role="alert">
                 <strong>Hey!</strong> If you select the block or delete button with your <strong>ID</strong>, you will be logined out

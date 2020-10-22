@@ -15,7 +15,7 @@ export const Toolbar = ({ handler }) => {
                 value="PUT"
                 onClick={handler}
                 className="btn btn-success">
-                Active
+                Unblock
             </button>
             <button type="button"
                 name="Delete"

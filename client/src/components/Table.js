@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import { Checkbox } from './Checkbox'
 
-export const UserDataList = ({ users, setUsers }) => {
+export const Table = ({ users, setUsers }) => {
     const [allChecked, setAllChecked] = useState(false)
     useEffect(function () {
         console.log(users);
@@ -10,6 +10,8 @@ export const UserDataList = ({ users, setUsers }) => {
 
     const handleCheck = e => {
         const { name, checked } = e.target
+
+        console.log('-------------------------------');
 
         if (name === "checkAll") {
             setAllChecked(checked)
@@ -35,7 +37,7 @@ export const UserDataList = ({ users, setUsers }) => {
                                 onChange={(e) => handleCheck(e)} />
                         </th>
                         <th scope="col">ID</th>
-                        <th scope="col">Name</th>
+                        <th scope="col">Full name</th>
                         <th scope="col">Email</th>
                         <th scope="col">Created</th>
                         <th scope="col">Last login</th>
